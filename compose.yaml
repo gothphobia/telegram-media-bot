@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    # For cookies, mount your file and set COOKIES_FILE=/app/cookies.txt.
+    # yt-dlp may update its cookie jar, so mount a writable dedicated copy.
+    # volumes:
+    #   - ./cookies.txt:/app/cookies.txt
